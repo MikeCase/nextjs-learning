@@ -1,14 +1,15 @@
 import resumeStyle from '../../styles/Resume.module.css'
 
 
-const R_WorkHist = ({props}) => {
+const R_WorkHist = ({work_hists}) => {
     return (
         <>
             <h2>Work History</h2>
             <ul>
-                <li>Job 1</li>
-                <li>Job 2</li>
-                <li>Job 3</li>
+                {work_hists.map((work_hist, idx) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <li key={idx}>{work_hist.company.name}</li>
+                ))}
             </ul>
         </>
     );

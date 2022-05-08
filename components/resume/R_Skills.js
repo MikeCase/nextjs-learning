@@ -1,15 +1,14 @@
 import resumeStyles from '../../styles/Resume.module.css'
 
-const R_Skills = ({props}) => {
+const R_Skills = ({skills}) => {
     return (
         <>
             <h2>Skills</h2>
             <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>HTML</li>
-                <li>CSS</li>
+                {skills.map((skill, idx) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <li key={idx}>{skill.name}</li>
+                ))}
             </ul>
         </>
     );

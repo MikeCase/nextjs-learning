@@ -9,7 +9,7 @@ const ResumeHeader = ({props}) => {
 
     return (
         <>
-            <h2>Contact Info</h2>
+            <h2>Contact Info </h2><span>*Randomly generated</span>
             <ul>
                 <li>
                     Name: {user_name}
